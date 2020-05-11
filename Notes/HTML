@@ -1,1 +1,446 @@
+                                    Hyper Links in HTML
+- A is clickable text, picture or graphic that navigates the user to any location when clicked.
+- Hyper Link is similar but it follows the rules of Http over internet.
+- Hyper Links in HTML are classified into 2 Types
+	              a) Intra Document Links
+	              b) Inter Document Links
+- Intra document links , will handle navigate to any location within the same page.
+- Inter document links will handle navigation from one page to another or any specific URL or file.
+- HyperLinks are created in HTML by using anchor elements  <a>
+- Navigation in HyperLink is defined by using the attribute "href" [Virtual Path]
 
+ Syntax:
+	<a href="path"> Text / Image </a>
+
+  path inside page	: Intra document link
+  path outside page	: Inter document link
+
+Intra document Links:
+- It handles the navigation from one location to another with in the same page.
+- For intra document link the "href" start with "#".
+
+Syntax:
+	<h2 id="css"> CSS Tutorial </h2>
+
+	<a href="#css"> Goto CSS </a>
+
+Inter Document Links:
+- A hyper link that navigates the user to any another document or url.
+- Anchor <a> element with "href" attribute is used for navigation.
+- Navigation can be to any file
+	          <a href="home.html"> Home </a>
+- Navigation can be to any URL.
+            <a href="http://www.amazon.in">
+            Shopping
+            </a>
+- Navigation can be to any mail application
+                  <a href="mailto:hr@nareshit.in">
+	          email
+	          </a>
+- Navigation can be to files like Images, PDF, which can open in browser.
+
+- Navigation can be to any file, but every file can't open in browser such as PPT, Excel, Word, Audio etc..
+
+- If any file defined in link can't open, then the file will be downloaded on click.
+
+
+FAQ's:
+1. How to design a link so that the link target file will always download? i.e it will not open in browser.
+A. HTML 5 have introduced a new attribute for downloading. The attribute is "download".
+
+  Syntax:
+    <a href="Images/earpods.jpg" download>
+     Earpods
+    </a>
+
+2. How to remove underline for HyperLink?
+A. By using Style  = text-decoration:none
+
+     To Remove underline for all links:
+      <style>
+         a {
+             text-decoration:none;
+            }
+      </style>
+ 
+     To Remove underline for any specific:
+
+      <a href=""  style="text-decoration:none">
+
+3. How to change color for Hyperlink?
+A. By using HTML we have body attributes
+              a) alink
+              b) vlink
+    By using Styles we can change colors
+              a:link	- normal [not visited]
+              a:visited	- visited link
+              a:active	- active link
+  Ex:
+      <style>
+            a:link {
+                color:black;
+            }
+            a:visited {
+                color: green;
+            }
+            a:active {
+                color:yellow;
+            }
+        </style>
+
+4. How to open the linked file in a new Tab?
+A. You can open the linked file in a new tab by using the attribute "target=_blank".
+
+Syntax:
+ <a href="tutorial.html" target="_blank">
+  View Our Tutorial
+ </a>
+
+5. How to open the linked file in a new window not tab?
+A. By using JavaScript  "window.open()" method in  href.
+
+   href="javascript:window.open('fileName', 'title', 'width=0  height=0 ')
+   
+   Ex:
+     <a href="javascript:window.open('Images/earpods.jpg', 'Earpods', 'width=300 height=300')">   Earpods </a>
+
+Styles for Link Target
+- If page is having intra document links, which are displayed in a single page, then you can use the style target to highlight the topics on link Click.
+- Initial the topics are in normal state with some styles. And when they become target they acquire additional effects
+
+Syntax:
+       .containerNormal {
+            some effects;
+        }
+       .containerNormal: target {
+            change of effects;
+        }
+
+Frames:
+=======
+- Frames are available from HTML 4 version
+- Frame will split the window into horizontal and vertical panes.
+- So that in every pane, you can display and handle a document.
+- You can split the window into frames by using the element "Frameset"  <frameset>
+   Syntax:
+         <frameset  rows=""  cols="">
+
+         </frameset>
+ 
+   rows = for horizontal split
+   cols  = for vertical split
+
+- Frameset contains collection of Frames which are defined by using <frame>
+- Every <frame> will have 
+                a) name
+                b) src
+
+  Syntax:
+     <frameset rows="" cols="">
+          <frame name=""  src=""> </frame>
+          <frame name=""  src=""> </frame>
+     </frameset>
+
+
+Note: When you are designing "Frameset" the HTML page can't have "body section". 
+      You can't display any content directly. 
+      You have to design contents in a page and display inside <frame>.
+
+                                  Forms in HTML
+ - Form provides an UI that allows the user to interact with data or with our application.
+- Form is a container with collection of controls like button, textbox, checkbox, radio, listbox etc..
+- In HTML DOM
+	 window
+	 |_document
+	    |_forms[]	--> collection
+	       |_elements[]
+- A form in HTML is created by using <form> element.
+- Elements in the form are created by using
+  <input>
+  <select>
+  <option>
+  <optgroup>
+  <textarea>
+  <datalist>
+  <meter>
+  <progress>
+
+The <form> Element:
+ - It is a container with collection elements like buttons, textbox, checkbox, radio, listbox, dropdown list etc..
+  Syntax:
+	<form>
+	         // elements
+	</form>
+
+Form Attributes:
+
+Attribute	  	Description
+===========================================
+ id	          It defines a unique reference id for from.
+ name	        It defines a reference name for form.
+ class	      It defines a class name for css or for
+	            reference in logic.
+ method	      It specifies the request type to use in
+	            order to submit the data. GET/POST
+ action	      It specifies where to submit the data 
+	            i.e any server side page.
+ target	      It submits and opens the target in a 	
+	            new tab or specified frame.
+ novalidate   It will disable the form validation.
+
+
+Form Methods:
+- Every form is by default defined on GET method.
+- A form can be defined for GET or POST methods.
+- In services form can use the methods like GET, POST, PUT, DELETE, PURGE, OPTIONS etc..
+- You can submit the form data to server on both GET and POST.
+
+GET		                             	POST
+============================================
+- Data is appended into URL         - Data is submitted
+  as QueryString.		                  into form body
+			                                [message body]
+- Anyone can view your data.	      - users can't view
+		                                   after submit.
+- It is easy to hack your data.	    - It difficult to hack
+- It is not safe.		                - It is safer than GET
+- Your data will be stored in	      - It is not stored in
+  browser logs[history].	             browser logs.
+- Anyone can bookmark data.         - It can't be bookmarked
+- Data is in URL so you can't       - you can submit
+  pass complex data i.e binary	       complex data.
+  [images, graphics].
+- Limit for data , max you can	    - No limit for data.
+  submit 2048 chars in query
+  string.
+- It can handle only ASCII type     - Any type data
+  value.
+- Always use GET method to	        - Post method to
+  fetch data from server not to	      submit.
+  submit to server.
+- The data you submit can be	      - Data can't be cached.
+  cached i.e it is stored in the
+  buffer for sometime. so that
+  you can access and use from
+  buffer. It reduces burden on  
+  server.
+
+ GET 	: for fetching the data
+ POST	: for submittng the data                                 
+
+
+Input Element <input> :
+  -It allows the user to input any value. 
+  -It can display value and allow the user to input or edit value.
+
+Tag <input> Attributes:
+1. id 	: It defines an unique reference ID.
+2. name	: It defines a reference name, which can be
+	        common for many elements.
+3. class: It defines a class name for css or for
+	        refernce in code.
+
+Note: A form can't submit value of element if "name" is not defined.
+      Hence name is mandatory to submit value.
+      Always use "camelCase" for naming.
+	ex:  txtAge
+	       txt -  object type
+                         Age - purpose 
+
+4. value : It specifies the value you want to display in the element by default.
+
+5. type :  It specifies the type of value that is allowed from the input element.
+           You can restrict the data type of input value.
+
+   	DataTypes for Input
+	- text
+	- passsword
+	- color
+	- date
+	- datetime
+	- datetime-local
+	- email
+	- month
+	- number	
+	- range
+	- search
+	- tel
+	- time
+	- url
+	- week
+	- file
+
+
+ Syntax:
+ 	<input type="text">
+	<input type="number">
+	<input type="date">
+
+Note: The new input types are not support on every browser, we have to depend on Jquery plug-in, widgets.
+
+6. size  : It defines the width for input element. The default size is 20.
+
+        	<input type="text" size="40">
+
+7. minlength : It specifies the minimum number of chars that can be entered into input.
+	             It is used for text and password type.
+
+8. maxlength: It specifies the maximum number of characters that can be entered into input.
+
+             Syntax:
+                 <input type="text" minlength="4" maxlength="10">
+
+9. min 	]  Used to define the numeric range for
+10. max	]  input value. It can be used for number and range.
+
+            Syntax:
+            <input type="number" min="15" max="30" value="25"  name="txtAge">
+
+11. required: It is used to define mandatory fields in a form.
+              If you define required attribute then it must have a value.
+              You can't submit empty / null.
+
+       <input type="text"  required>
+
+12. readonly : It is an attribute which is used to restrict editing of value in input element.
+
+                 Syntax:
+                   <input type="text"  value="John" readonly>
+
+13. disabled : It is used to disable the element, so that form can't submit the disabled element value.
+
+           <input type="text"  value="John" disabled>
+
+FAQ: What is difference between disabled and readonly?
+A.  Readonly will not allow to change but allows to submit the value.
+      Disabled will not allow to change and will not allow to submit.
+
+14. Placeholder:  It is used to display watermark text inside input element.
+
+    Syntax:
+     <input type="password"  name="txtPwd" minlength="4" maxlength="10" placeholder="Password 4 to 10 chars Only">
+
+Note: When user inputs value the placeholder will be removed.
+
+15. Autofocus: It sets focus into any element directly on page load.
+               Focus will be only to the first element if it is defined for multiple elements.
+
+         <input type="text"  name="txtName" autofocus>
+
+16. list : It refers to datalist , which is displayed while user is keying-in [typing] the characters.
+           It give suggestions based on the keyword typed in input.
+           It requires a <datalist> with collection of <option> elements.
+
+              Syntax:
+                <input type="text"  list="terms">
+                <datalist id="terms">
+                <option> Term-1 </option>
+                <option> Term-2 </option>
+                </datalist>
+17. pattern : It is used to verify the format of input value and restrict the value to a specific format.
+	    Patterns are written by using a regular expression, which is a combination of meta characters and quantifiers { }.
+
+Meta Characters		        Description
+===========================================
+?		                      Zero or One occurance	     
++		                      One or More occurance
+* 	                    	Zero or More occurance
+\		                      To define any entity 
+d	                      	Only numeric allowed
+w		                      Alpha numeric with _
+s		                      Blank spaces allowed
+
+
+Ex:
+     color,  colour
+     pattern="color, colour"    --> Invalid
+     pattern="color || colour"  --> Invalid
+
+    
+
+     pattern="colou?r"
+
+      u  - can be zero times or one time.
+
+pattern requires meta characters and quantifiers:
+
+Meta Character	    Description
+============================================
+ ?	              	Zero or One occurance of char.
+ +	              	One or more occurances of char.
+ *		              Zero or more occurances of char.
+ \	              	for any individual character or entity.
+ w		              It is an entity for word, it can be
+		                aplha numeric with underscore _
+ 	                	[lowercase alphabet, uppercase
+		                alphabet, number 0 to 9, and
+		                underscore ]
+  d		              It is an entity for only numeric.	[0-9]
+  s	              	It is an entity for blank space.
+  \^		            Expression must start with.
+  $		              Expression must end with. \^[A-Z][0-9]$  
+  [A-Z]		          Only uppercase allowed
+  [a-z]	          	Only lowercase allowed
+  [a-zA-Z] or[a-Z]	Both upper and lowercase
+  [0-9]		          Only number allowed
+  [a-zA-Z0-9]	      Aplha numeric allowed
+  [a,d,s]	        	Only specified chars allowed
+  		              [you can input any text but it
+	                 	should contain only a, d & s]
+  [^a,d,s]		      Excluding the 3 all others allowed.
+  [a-mA-M4-9]     	Allows only the chars within specified range.
+  [!@#$%&]	        Only specified special chars allowed
+  \@  \.  \$ \+   	Individual special chars allowed
+
+  (?=.*[A-Z])     	At least one uppercase letter
+  (?=.*[a-z])	      At least one lowercase letter
+  (?=.*[0-9])     	At least one numeric
+  (?=.*[!@#$%&])	  At least one special char
+   ( )	          	Defining sub expression
+    .	            	Matches any single character
+	                	[a.c]  abc - valid
+		                [a,c]  a or c 
+  
+[A-Z]   --> how many allow - only 1 allowed A, or B, .. Z
+
+Quantifier		    Description
+============================================
+ {n}	          	Exactly n-number of characters
+ {n, m}		        Minimum-n and Maximum-m
+ {n, }		        Minimum-n and Maximum-any
+
+ n & m refers to numbers.
+
+ {4}		          Exactly 4 chars
+ {4, 10}	      	Minimum 4 and maximum 10
+ {4, }		        Minimum 4 and Maximum any
+ 
+ New Attributes introduced into HTML 5
+================================
+- autocomplete
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regExp)
+- placeholder
+- required
+- step
+
+Styles for Input Elements:
+1. Disabled and ReadOnly
+    input:read-only {
+
+    }
+    input:disabled {
+
+    }
+
+01-04-2020 notes start from there
