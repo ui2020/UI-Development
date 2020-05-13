@@ -443,4 +443,373 @@ Styles for Input Elements:
 
     }
 
-01-04-2020 notes start from there
+Form Element
+Input Element
+Input element attributes
+
+         Various Types of Form Controls in HTML
+         ---------------------------------------
+1. Fieldset and Legend
+     Fieldset is used for defining a group of elements.
+     Legend is used for defining a caption for group.
+
+Syntax:
+  <fieldset>
+      <legend> Title </legend>
+      .... your controls ....
+  </fieldset>
+  
+  2. Radio Buttons  [input type="radio"]
+   - Radio button are used for providing choice
+   - User can choose one or multiple.
+
+Syntax:
+  <input type="radio"> Text
+
+   - Radio Button once checked can't be unchecked.
+   - In order to uncheck the radios you have to implement "Mutex" mechanism or restart the process.
+   - Mutex is "Mutual Exclusion".
+   - Mutex is a multi threading mechanism that allow only one task in the process, that belongs to thread.
+   - On single thread multiple tasks are defined and only task can be used.
+   - This allows user to select only one option from a group of choices. [only when mutex is working]
+   - If selection is mandatory but user can choose only one option from a group of choices then you can use "Radio" button.
+   - You can make selection mandatory by using "checked" attribute.
+   - You can define Mutex mechanism by specifying a common name for all radios in a group.
+
+ Syntax:
+  <input type="radio" name="pay" checked> Text
+  <input type="radio" name="pay"> Text
+
+  - Radios by default submit "ON" as value.
+  - You can submit any value by defining "value" attribute.
+
+ Syntax:
+   <input type="radio" name="pay" value="UPI" checked> Text
+
+Attribute:
+1. id
+2. name
+3. class
+4. value
+5. checked
+
+3. CheckBox Element
+    - It is similar to radio button , but allows to check and uncheck the option.
+    - You can use checkbox for selecting one or multiple options from a group of choices.
+
+Attribute:
+1. id
+2. name
+3. class
+4. value
+5. checked
+
+Syntax:
+ <input type="checkbox" name="" value="" checked> Text
+ 
+ Style for Checked Property:
+   The style ":checked " is used to define effects when checkbox is checked.
+
+- Form
+- Input
+- Radios
+- CheckBox
+
+	       DropDownList
+- It provides a list of options and allows the user to select any one option from list.
+- In a single line it can display multiple options.
+- DropDownList is designed by using 
+	<select> 
+   It comprises of attributes like: id , name, class, size, multiple.
+
+- The items in dropdown list are designed by using
+	<option>
+   Every option can be defined with following attributes:
+           Attribute		Description
+           -------------------------------------
+           Text			The text to display in UI
+           Value		The value to submit
+           Disabled		To disable the option so that
+		 		it can't be selected.
+           Selected		To select the option be default
+				on page load.
+
+ Syntax:
+    <select>
+    <option value="" disabled  selected> Text </option>
+    </select>
+
+
+- The items in dropdown list can be grouped by using <optgroup>
+   The title for group is defined by using the attribute "Label"
+
+Syntax:
+<select name="lst">
+<optgroup label="Title"> 
+ <option value="" disabled> Text </option>
+ <option value="" selected> Text </option>
+</select>
+
+ ListBox
+- It is similar to DropDownList
+- It can display multiple items on screen with a scrollbar.
+- It allows the user to select or multiple options.
+- A listbox is also designed by using
+	<select>
+  but it requires an attriubte  : size or multiple
+
+   Size	: It converts into listbox but user select
+	  only one option.
+   Multiple : It converts into listbox where user can
+	  select one or multiple options.
+
+			 Progress
+- It is used to show the status of any task performed inside the page, like installing, downloading, copying, uploading etc..
+- You control progress by using attributes
+	a) Id
+	b) Name
+	c) Class
+	d) Min
+	e) Max
+	f) Value
+
+		  Meter
+- It is used to display the grade meter.
+- Attributes similar to progress
+	a) id
+	b) class
+	c) name
+	d) min
+	e) max
+	f) value
+	g) low
+	i)  high
+
+- Less gap between low and high  : red
+- More gap between low and high : yellow
+- Low and high are zero	     : green
+
+		Buttons in HTML
+- Buttons are used to confirm user actions.
+- Buttons are uses in
+	record actions [insert, create, update etc..]
+	record navigation[previous, next, first ..]
+	miscelaneous [submit, reset, ok, cancel, 
+		         print etc.. ]
+- In HTML buttons are classified into 2 types
+	a) Generic Buttons
+	b) Non-Generic Buttons
+
+- Generic Buttons are the buttons with predefined functionality.
+	<input type="submit">
+	<input type="reset">
+ 
+ Submit  : Is a button that can submit the form.
+ Reset   : Is a button that will reset the form.
+
+- Non-Generic Buttons are the buttons without and pre-defined functionality.
+	They are ordinary buttons. You have to define functionality manually.
+
+	<input type="button">
+
+Attribute:
+1. id
+2. name
+3. class
+4. value
+
+HTML 5 <button> Element, which can be used for both generic and non-generic. The "type" attribute can configure  the button as:
+	type=submit	] Generic	
+	type=reset	]
+	type=button	]  Non-Generic
+
+New Attributes for Button element
+1. formmethod   : It specifies the request type i.e
+	             GET or POST to use on submit click
+2. formaction   : It specifies the target page where
+	            the data to be submitted i.e any
+	            server side page.
+3. formtarget   : It specifies where to open the
+	            target i.e in a new window or in
+	            the same window.
+	            new tab: _blank.
+
+4. formnovalidate : It specifies validation on submit
+	            to enable or disable.
+
+
+	<input type="submit"  formaction=""  formmethod="" formnovalidate=""  formtarget="">
+
+	<button type="submit" formaction=""  formmethod="" formnovalidate=""  formtarget=""> </button>
+
+Label Element: It is just a container used to display labels and captions for form elements in HTML.
+		YOu can bind the label with form element.
+		You can bind any HTML element to Label by using "for" attribute.
+
+	      <label for="elementName"> Text </label>
+	      <label for="txtName">Name</label>
+
+HTML 5 New Elements
+
+The <output>  Element: 
+===================
+It is new HTML element used to display the result of any expression. It evaluates and reutrns result based on form input.
+	It requires an form event "oninput" , which is used to perform functionality on input.
+
+ 			HTML Tables
+- A table can organize information into rows and columns.
+- Tables are required for presenting data and provide an UI to interact with data like : filtering, sorting etc..
+- To create and configure tables in HTML we can use the following elements.
+
+Element			Description
+============================================
+<table>		It is a collection of rows and cols
+<caption>	It is to define a caption for table
+<colgroup>	Groups the columns to define
+		effects.
+<thead>		It specifies the header
+<tbody>		It specifies the body
+<tfoot>		It specifies the footer
+<th>		It specifies table header cell
+<tr>		It specifies table row
+<td>		It specifies the table data [cell]
+
+         Tables in HTML
+<table>
+<caption>
+<thead>
+<tbody>
+<tfoot>
+<tr>
+<td>
+<th>
+<colgroup>
+
+Table Attributes:
+1. Border, Frame, Rules
+
+    Attribute		Description
+   =======================================
+   Frame		It sets a frame for table, which
+			can use values box, void, rhs, lhs, above and below.
+
+  Rules			Defined for rows and cols.
+			all, none, groups, rows, cols
+
+  Border		Defined for cell. It can contain
+			only 0 or 1.
+			0 [false] - no border
+			1 [true]  - border.
+
+   Frame is set for Table
+   Rules set for Rows and Columns
+   Border set for Cells 
+   [All are defined in <table> element]
+
+   Note: Rules and Border both can't be used. If you apply both to table only rules will be displayed.
+   	You should remove rules attribute to use border.
+
+		Syntax:
+		     <table border="1" frame="void">
+		     <table border="1" frame="box">
+		     <table border="0" frame="box">
+		     <table rules="groups" frame="box">
+		     <table rules="all" frame="void">
+    
+2. Cellspacing and Cellpadding
+
+    Attribute		Description
+   ===================================
+    cellspacing		It is distance between cells
+    cellpadding		It is distance between cell border
+			and content inside.
+
+		Syntax:
+		  <table cellspacing="10" cellpadding="5">
+
+3. Align and Valign
+
+  Attribute		Description
+===========================================
+    align		It aligns the content horizontally
+			left, center or right.
+			you can define for table, group,
+			tr, th, td.
+
+    valign		It aligns the content vertically
+			top, center, bottom.
+			you can define for group, tr,
+			th, td.
+
+		Syntax:
+		 <table align="center">
+		 <thead align="center" valign="top">
+		 <tr align="right" valign="bottom">
+
+4. bgcolor and background
+
+   Attribute		Background
+  =======================================
+   bgcolor		Sets a background color for
+			table, group, tr, th, td.
+
+   background		Sets a background picture
+			for table, group, tr, th, td.
+
+		Syntax:
+		   <table background="../Images/back.png">
+		   <table bgcolor="yellow">
+		   <thead bgcolor="yellow">
+
+Note : If you set background image, then background color will not be displayed.
+
+5. Merging Row and Columns in Table
+
+Attributes		Description
+=====================================
+ rowspan		It merges specified number of
+			rows into single row. It can be	
+			defined for <td> element.
+
+ colspan		It merges specified number of
+			columns into single cell [column]
+			It is defined for <td> or <th>
+
+Note: Rowspan will work only within the group.
+          Colspan can be applied to all columns.
+
+6. Height and Width
+     Height is used to define height of row in specified pixels. you can define for row or table.
+     Width is used to define width for column , you can define for <td> or <th> 
+
+
+Marquee
+- It is used for scrolling and sliding content in a page.
+- The <marquee> Tag is used for scrolling content.
+
+Attribute		Description
+===========================================
+Direction	        It specifies the scrolling direction
+	        	left, right, up and down.
+			<marquee direction="left">
+
+Scrollamout   		It controls the marquee scrolling speed.
+	       		from 1 to 100.
+	        	<marquee scrollamount="30">
+
+bgcolor	       		It sets background color for marquee area
+	        	<marquee bgcolor="yellow">
+
+loop	        	It specifies how many times marquee
+	        	have to scroll after page load.
+	         	<marquee loop="3">
+
+behavior="alternate"    It changes from scrolling to
+		    	sliding in alternate direction.
+
+
+You stop or start marquee dynamically using JavaScript:
+- start()
+- stop()
+ <marquee onmouseover="this.stop()"  onmouseout="this.start()">
+
