@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                margin: auto;
+            }
+            header{
+                height: auto;
+                width: auto;
+                background-color: lightcyan;
+                box-shadow: 2px 2px 4px darkcyan;
+                margin-bottom: 5px;
+                overflow: auto;
+            }
+            #links{
+                width: auto;
+                height: auto;
+            }
+            #links a{
+                font-size: 2em;
+                font-weight: bolder;
+                color: lightgray;
+                transition: all 0.3s ease-in-out;
+                text-decoration: none;
+                padding: 20px 10px;
+            }
+            .active{
+                background-color: green;
+            }
+            #links :hover{
+                background-color: orange;
+            }
+            footer{
+                height: auto;
+                width: 100%;
+                background-color: lightcyan;
+                box-shadow: 2px 2px 4px darkcyan;
+                padding: 5px;
+                font-style: italic;
+                text-align: center;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            section{
+                height: 450px;
+                width: 100%;
+                margin-top: 5px;
+                box-shadow: 2px 2px 3px black;
+                margin-bottom: 5px;
+                padding: 10px;
+                background-image: url("../Images/bg4.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            figure{
+                background-color: white;
+                box-shadow: 2px 2px 4px lightseagreen;
+                width: 150px;
+            }
+            aside{
+                height: 100px;
+                width: 200px;
+                border: 1px solid black;
+                position: fixed;
+                right: 100px;
+                top: 150px;
+            }
+            article{
+                height: 100px;
+                width: 200px;
+                border: 1px solid black;
+                position: fixed;
+                right: 100px;
+                top: 300px;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <header>
+            <nav>
+                <menu id="links">
+                   <a class="active" href="#home" class="fa fa-home">home</a>
+                   <a href="#about" class="fa fa-user-circle">about</a>
+                   <a href="#contact" class="fa fa-address-book">contact</a>
+                </menu>
+            </nav>
+        </header>
+        <section>
+            <div>
+                <figure>
+                    <img src="../Images/1.jpg" alt="shirts" width="150" height="150">
+                    <figcaption>shirts for men</figcaption>
+                </figure>    
+            </div>
+            <dialog open>
+                <form>
+                    <label for="mail">your email:</label>
+                    <input type="email">
+                    <button>submit</button>
+                </form>
+            </dialog>
+            <aside>
+                ads here
+            </aside>
+            <article>
+                offers
+            </article>
+        </section>
+        <footer>
+            &copy;copy right | 2020 abcd
+        </footer>
+    </body>
+</html>
