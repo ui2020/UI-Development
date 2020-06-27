@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dropdown list</title>
+        <style>
+            fieldset{
+                width: 300px;
+            }
+            select{
+            width: 200px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        form{
+            padding: 20px;
+        }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <form>
+            <fieldset>
+                <legend>select product</legend>
+                <select name="list">
+                    <option>choose from list</option>
+                    <optgroup label="Electronics">
+                        <option value="mob123">Mobile</option>
+                        <option value="02tv023" disabled>Television</option>
+                    </optgroup>
+                    <optgroup label="Fashion">
+                        <option value="01shirt" selected>Shirt</option>
+                        <option value="30jeans10">Jeans</option>
+                    </optgroup>
+                    <optgroup label="Footwear">
+                        <option value="Nike Casuals">Nike Casuals</option>
+                        <option value="Boot">Lee Cooper Boot</option>
+                    </optgroup>
+                </select>
+                <button>submit</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
