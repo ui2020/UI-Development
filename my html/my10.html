@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header{
+                background-color: darkcyan;
+                border-radius: 5px;
+                text-align: center;
+                padding: 5px;
+                color: white;
+            }
+            footer{
+                background-color: darkcyan;
+                border-radius: 5px;
+                text-align: center;
+                padding: 5px;
+                margin-top: 30px;
+                color: white;
+            }
+            section{
+                height: 400px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #leftpanel{
+                border: 3px solid darkcyan;
+                border-radius: 5px;
+                float: left;
+                height: 100%;
+                width: 20%;
+                padding: 5px;
+            }
+            #rightpanel{
+                float: left;
+                border: 3px solid darkcyan;
+                border-radius: 5px;
+                height: 100%;
+                width: 75%;
+                padding: 5px;
+                margin-left: 10px;
+                overflow: scroll;
+            }
+            a{
+                text-decoration: none;
+            }
+            ul{
+                list-style-type: none;
+                text-align: center;
+            }
+            li {
+                margin-top: 15px;
+                border:2px solid black;
+                box-shadow: 0px 2px 3px darkcyan;
+                width: 150px;
+            }
+            iframe{
+                width: 75%;
+                border-style: none;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <header>
+            Amazon shopping
+        </header>
+        <section>
+            <div id="leftpanel">
+                <h3 style="text-align: center;">Table of contents</h3>
+                <ul>
+                    <li><span class="fa fa-home"></span><a href="#home">Home</a></li>
+                    <li><span class="fa fa-tv"></span><a href="#electronics">Electronics</a></li>
+                    <li><span class="fa fa-shoe-prints"></span><a href="#footwear">Footwear</a></li>
+                    <li><span class="fa fa-tshirt"></span><a href="#fashion">Fashion</a></li>
+                    <li><span class="fa fa-address-book"></span><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div id="rightpanel">
+                <iframe name="frameBody" src="home.html" id="home"></iframe>
+                <iframe name="frameBody" src="electronics.html" id="electronics"></iframe>
+                <iframe name="frameBody" src="footwear.html" id="footwear"></iframe>
+                <iframe name="frameBody" src="fashion.html" id="fashion"></iframe>
+                <iframe name="frameBody" src="contact.html" id="contact"></iframe> 
+            </div>
+        </section>
+        <footer>
+            <i>&copy; copy right 2020 | Amazon shopping</i>
+        </footer>
+    </body>
+</html>
