@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input{
+                width: 350px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <form action="welcome.aspx" method="POST" name="register" target="_self">
+            <dl>
+                <dt>UserName</dt>
+                <dd><input type="text" name="txtName" placeholder="4 to 10 characters BLOCK Letters only" pattern="([A-Z]{4-10})"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" name="txtPwd" placeholder="4 to 10 alphanumeric with atleast 1 uppercase and special character" pattern="(?=.*[A-Z])\w{4,10}"></dd>
+                <dt>Mobile</dt>
+                <dd><input type="text" name="txtMobile" placeholder="+91 10 digits number" pattern="\[0-9]{10}"></dd>
+                <dt></dt>
+            </dl>
+            <button>submit</button>
+        </form>
+    </body>
+</html>
