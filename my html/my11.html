@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorials</title>
+        <style>
+            header{
+                box-shadow: 2px 2px 3px black;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+            }
+            header a{
+                text-decoration: none;
+                font-size: 1em;
+                padding: 5px;
+            }
+            footer{
+                box-shadow: 2px 2px 3px black;
+                padding: 5px;
+                text-align: center;
+                margin-top: 10px;
+            }
+            section{
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .container{
+                box-shadow: 2px 2px 3px darkcyan;
+                padding: 10px;
+                margin: 10px;
+            }
+            .container:target{
+                box-shadow: 2px 2px 3px darkcyan;
+                padding: 10px;
+                margin: 10px;
+                background-color: black;
+                color: white;  
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <header id="topics">
+            <a href="#html">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#javascript">JavaScript</a>
+        </header>
+        <section>
+            <div id="html" class="container">
+                <h3>HTML</h3>
+                <p>something about HTML....</p>
+            </div>
+            <div id="css" class="container">
+                <h3>CSS</h3>
+                <p>something about CSS...</p>
+            </div>
+            <div id="javascript" class="container">
+                <h3>JavaScript</h3>
+                <p>something about JavaScript</p>
+            </div>
+        </section>
+        <footer>
+            <i>&copy; copy right 2020 | Tutorials</i>
+        </footer>
+    </body>
+</html>
