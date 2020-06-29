@@ -1,0 +1,171 @@
+<!--
+    It is used for scrolling and sliding content in a page.
+    The <marquee> Tag is used for scrolling content.
+
+Direction	    It specifies the scrolling direction left, right, up and down.
+                    <marquee direction="left">
+Scrollamout	    It controls the marquee scrolling speed.
+                        from 1 to 100.
+                        <marquee scrollamount="30">
+bgcolor	        It sets background color for marquee area
+                    <marquee bgcolor="yellow">
+loop	        It specifies how many times marquee have to scroll after page load.
+                    <marquee loop="3">
+
+behavior="alternate"    It changes from scrolling to sliding in alternate direction.
+
+You stop or start marquee dynamically using JavaScript:
+- start()
+- stop()
+<marquee onmouseover="this.stop()"  onmouseout="this.start()">
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>marquee nested</title>
+        <style>
+            th{
+                font-size: 2em;
+                border-radius: 5px;
+                font-style: normal;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            form{
+                border: 1px solid darkcyan;
+                border-radius: 5PX;
+                padding: 5px;
+            }
+            .product {
+                float: left;
+                margin-left: 20px;
+            }
+            input, select {
+                font-size: 1em;
+                width:100px;
+                border-radius: 4px;
+            }
+            label {
+                margin-top: 10px;
+            }
+            dt {
+                font-weight: bold;
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                transition: 2s;
+            }
+            img:hover {
+                transform: scale(2);
+                transition: 2s;
+            }
+            td{
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <table frame="void" border="1" cellpadding="5px" cellspacing="10px" width="100%">
+            <tr>
+                <th>
+                    <marquee behavior="alternate" scrollamount="10">products catalog</marquee>
+                </th>
+            </tr>
+            <tr height="auto">
+                <td align="center" style="border-radius: 5px;">
+                    <table>
+                        <tr>
+                            <td>
+                                <form action="welcome.aspx">
+                                    <label>select category</label>
+                                    <div>
+                                        <select>
+                                            <option>Electronics</option>
+                                            <option>Footwear</option>
+                                            <option>Fashion</option>
+                                        </select>
+                                    </div>
+                                    <label>search product</label>
+                                    <div>
+                                        <input type="text" name="txtSearch">
+                                    </div>
+                                    <label>select price</label>
+                                    <div>
+                                        <input type="range">
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="left" scrollamount="15">
+                                    <table class="product" border="1" frame="void" cellspacing="5" cellpadding="10">
+                                        <tr>
+                                            <td>Ear Pods</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="../Images/1.jpg" alt="boAt EarPods" width="100" height="100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>&#8377;2999/-</td>
+                                        </tr>
+                                    </table>
+                                    <table class="product" border="1" frame="void" cellspacing="5" cellpadding="10">
+                                        <tr>
+                                            <td>Tshirt</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="../Images/2.jpg" alt="Mens tshirt" width="100" height="100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>&#8377;299/-</td>
+                                        </tr>
+                                    </table>
+                                    <table class="product" border="1" frame="void" cellspacing="5" cellpadding="10">
+                                        <tr>
+                                            <td>Jeans</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="../Images/3.jpg" alt="boAt EarPods" width="100" height="100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>&#8377;999/-</td>
+                                        </tr>
+                                    </table>
+                                    <table class="product" border="1" frame="void" cellspacing="5" cellpadding="10">
+                                        <tr>
+                                            <td>Mobile</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="../Images/4.jpg" alt="boAt EarPods" width="100" height="100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>&#8377;26999/-</td>
+                                        </tr>
+                                    </table>
+                                </marquee>
+                            </td>
+                            <td>
+                                <form>
+                                    <label>cart summary</label>
+                                    <marquee direction="up" loop="5">
+                                        <dl>
+                                            <dt>product count</dt>
+                                            <dd>2</dd>
+                                            <dt>Bill amount</dt>
+                                            <dd>4499.99</dd>
+                                        </dl>
+                                    </marquee>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="border-radius: 5px; font-weight: bold;">
+                    <i>&copy; copy rights 2020</i>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
