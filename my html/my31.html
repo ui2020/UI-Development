@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>button</title>
+        <style>
+            dd{
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <form>
+            <dl>
+                <dt>Name</dt>
+                <dd><input type="text" name="txtName" required></dd>
+                <dd>
+                    <button formmethod="GET">submit with GET</button>
+                    <button formmethod="POST" formaction="welcome.aspx" formtarget="_blank">submit with POST</button>
+                    <button formmethod="GET" formnovalidate="formnovalidate">submit without validation</button>
+                </dd>
+            </dl>
+        </form>
+    </body>
+</html>
