@@ -1,0 +1,40 @@
+<!--
+    Adjacent Selector  
+	+    Next adjacent element
+	~    All adjacent elements
+   h2+p { }   - only first paragraph – adjacent  immediatly after heading
+   h2~p { }  - all pargraphs under h2
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>adjacent selector</title>
+        <style>
+            h2+p{
+                color: white;
+                background-color: darkblue;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <h2>HTML</h2>
+        <p>It is a markup language.</p>
+        <p>It is used for Presentation.</p>
+        <p>Developed by Tim Berners Lee</p>
+        <h2>JavaScript</h2>
+        <p>Client side interactions</p>
+        <h2>CSS</h2>
+        <p>Styles for elements</p>
+        <hr>
+        <div>
+        <p>By 55,000 years ago, the first modern humans, or Homo sapiens,
+             had arrived on the Indian subcontinent from Africa, where they had earlier evolved</p>
+             <p>By 55,000 years ago, the first modern humans, or Homo sapiens, had arrived on the
+                 Indian subcontinent from Africa, where they had earlier evolved</p>
+                 <p>By 55,000 years ago, the first modern humans, or Homo sapiens, had arrived 
+                    on the Indian subcontinent from Africa, where they had earlier evolved</p>    
+        </div>
+    </body>
+</html>
