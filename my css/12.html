@@ -1,0 +1,62 @@
+<!--
+    Attribute Selectors: These selectors are used to apply effects based on the attribute of any tag.
+                                input	: tag
+                                type   	: attribute
+                                value	: attribute
+                                class	: attribute
+                                size	: attribute
+
+                            Syntax:
+                        tagName[attribute=value]
+                        {
+                        }
+
+    NOTE:
+    Attribute value Starts With: [^=]
+    Attribute value Ends With  : [$=]
+    Attribute value any match  : [*=]
+    Attribute value with hyphen : [|=]
+    Attribute value with space : [~=]
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>attribute selector</title>
+        <style>
+            input[value="submit"]{
+                color: white;
+                background-color: green;
+                border: green;
+                border-radius: 5px;
+                font-size: 1em;
+                padding: 3px;
+            }
+            input[value="cancel"]{
+                color: white;
+                background-color: red;
+                border: red;
+                border-radius: 5px;
+                font-size: 1em;
+                padding: 3px;    
+            }
+            input[name="txtAge"]{
+                background-color: greenyellow;
+                border: greenyellow;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <form action="welcome.aspx">
+            <dl>
+                <dt>Name</dt>
+                <dd><input type="text" name="txtName"></dd>
+                <dt>Age</dt>
+                <dd><input type="number" name="txtAge" value="0" min="16" max="28"></dd>
+            </dl>
+            <input type="button" value="submit">
+            <input type="button" value="cancel">
+        </form>
+    </body>
+</html>
