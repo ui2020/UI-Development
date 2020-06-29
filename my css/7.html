@@ -1,0 +1,74 @@
+<!--
+    Rational Selectors :
+    They target elements based on the relationship between elements. i.e parent and child hierarchy.
+
+    Decendent Selector:
+    It will apply effects to the child element specified under a parent element.
+    It will apply to all child elements i.e nested child.
+
+    Syntax:
+	ol li { 
+	}
+	div p {
+	}
+	dl dd {
+	}
+
+    Decendent Selector : It will effect to all paragraphs in Div.
+    Child Selector: It will apply only to paragraph that comes directly after div.
+    
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>decendent selector</title>
+        <style>
+            ul{
+                list-style-type: none;
+            }
+            div p{
+                border: red;
+                border-style: double;
+                padding: 15px;
+                text-align: justify;
+            }
+            ul li{
+                color: white;
+                background-color: magenta;
+                padding: 5px;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <div>
+            <p>Modern humans arrived on the Indian subcontinent from Africa no later than 55,000 years ago.[24] T
+                heir long occupation, initially in varying forms of isolation as hunter-gatherers, has made the region
+                 highly diverse, second only to Africa in human genetic diversity.[25] Settled life emerged on the subcontinent 
+                 in the western margins of the Indus river basin 9,000 years ago, evolving gradually into the Indus Valley 
+                 Civilisation of the third millennium BCE.[26] By 1200 BCE, an archaic form of Sanskrit, an Indo-European language, 
+                 had diffused into India from the northwest, unfolding as the language of the Rigveda, and recording the dawning of Hinduism 
+                 in India.[27] The Dravidian languages of India were supplanted in the northern regions.[28] By 400 BCE, stratification an
+                 d exclusion by caste had emerged within Hinduism,[29] and Buddhism and Jainism had arisen, proclaiming social orders unli
+                 nked to heredity.[30] Early political consolidations gave rise to the loose-knit Maurya and Gupta Empires based in the Ga
+                 nges Basin.[31] Their collective era was suffused with wide-ranging creativity,[32] but also marked by the declining st
+                 atus of women,[33] and the incorporation of untouchability into an organised system of belief.[g][34] In South India, t
+                 he Middle kingdoms exported Dravidian-languages scripts and religious cultures to the kingdoms of Southeast Asia.[35]</p>
+        </div>
+        <ol>
+            <li>HTML</li>
+            <li>Selectors
+                <ul>
+                    <li>rational</li>
+                    <li>pseudo</li>
+                    <li>adjacent</li>
+                    <li>class</li>
+                    <li>type</li>
+                </ul>
+            </li>
+            <li>CSS</li>
+            <li>javascript</li>
+        </ol>
+    </body>
+</html>
