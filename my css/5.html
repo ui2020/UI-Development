@@ -1,0 +1,55 @@
+<!--
+    Class Selector: A class selector allows multiple inheritence.
+                    Multiple categories of effects can be applied to single element.
+	                Class Selector is defined by using "." and it is accessible by using the keyword "class".
+                    Multiple classes are defined to single element separated with "blank space".
+
+                    Syntax:
+	     .className 
+	     {
+	      attribute:value;
+	      }
+    	<div class="class1 class2 class3 ...">
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>class selector</title>
+        <style>
+            .effects{
+                font-size: 1.5em;
+                background-color: darkcyan;
+                border: 2px solid black;
+                padding: 5px;
+                text-align: center;
+                color: white;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <h2 class="effects">Web Technologies</h2>
+        <dl>
+            <dt class="effects">HTML</dt>
+            <dd>normal elements</dd>
+            <dd>void elements</dd>
+            <dt>CSS</dt>
+            <dd>inline</dd>
+            <dd>embed</dd>
+            <dd>external</dd>
+        </dl>
+        <dl>
+            <dt class="effects">Angular</dt>
+            <dd>javascript</dd>
+            <dd>type script</dd>
+            <dt>JQuery</dt>
+            <dd>plugins</dd>
+            <dd>events</dd>
+        </dl>
+        <p class="effects">Any paragraph that you want you to write in this paragraph tag.<br>
+            your wish whatever you want you want to do you may do with him
+        </p>
+    </body>
+</html>
