@@ -1,0 +1,52 @@
+<!--
+    Styles defined in "in-line" technique doesn't require selectors
+    Selector specifies where to apply the effects.
+    Selector is required in "Embed and CSS" technique
+    h2{
+
+    }
+    p{
+
+    }
+    input{
+        
+    }
+	      You can also group the tags.
+
+	        h2, p{
+
+            }
+
+    DrawBack:
+        The effects will apply to every element that is designed by using the given tag.
+        You can't ignore effects for any specific element.
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>type selector</title>
+        <style>
+            h2{
+                font-size: 2em;
+                color: red;
+            }
+            p{
+                font-size: 1em;
+                color: red;
+            }
+            h2,p{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <h2>HTML</h2>
+        <p>Markup Language</p>
+        <h2>CSS</h2>
+        <p>Cascading Style Sheet</p>
+        <p>Makes interactive and responsive</p>
+        <h2>JavaScript</h2>
+        <p>Handles client side interactions</p>
+    </body>
+</html>
