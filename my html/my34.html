@@ -1,0 +1,80 @@
+<!--Note: Rules and Border both can't be used. 
+    If you apply both to table only rules will be displayed.
+    You should remove rules attribute to use border.
+
+Frame	It sets a frame for table, which can use values box, void, rhs, lhs, above and below.
+Rules	Defined for rows and cols.all, none, groups, rows, cols
+Border	Defined for cell. It can contain only 0 or 1.
+                        0 [false] - no border
+                        1 [true]  - border.
+                    
+align	It aligns the content horizontally left, center or right.
+        you can define for table, group, tr, th, td.
+valign	It aligns the content vertically top, center, bottom.
+        you can define for group, tr, th, td.
+
+bgcolor	    Sets a background color for table, group, tr, th, td
+background	Sets a background picture for table, group, tr, th, td.
+
+rowspan	It merges specified number of rows into single row. It can be defined for <td> element.
+colspan	It merges specified number of columns into single cell [column].  It is defined for <td> or <th>
+
+Rowspan will work only within the group.
+Colspan can be applied to all columns.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>table demo</title>
+        <style>
+
+        </style>
+    </head>
+    <body class="container-fluid">
+        <table border="1" frame="box" cellspacing="0" cellpadding="15" align="center" bgcolor="yellow">
+            <caption>Details</caption>
+            <thead align="center" valign="top">
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Mobile Number</td>
+                        <td>Mail</td>
+                    </tr>
+            </thead>    
+            <tbody>
+                    <tr align="right" valign="bottom">
+                        <td>vara</td>
+                        <td>lakshmi</td>
+                        <td>1234567890</td>
+                        <td>example@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>muththu</td>
+                        <td>swamy</td>
+                        <td>1234567890</td>
+                        <td>example@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>krishanan</td>
+                        <td>iyyer</td>
+                        <td>1234567890</td>
+                        <td>example@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>mahadeva</td>
+                        <td>gattamaneni</td>
+                        <td>1234567890</td>
+                        <td>example@gmail.com</td>
+                    </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><i>&copy; copy rights 2020</i></td>
+                    <td></td>
+                </tr>
+            </tfoot>    
+        </table>
+    </body>
+</html>
