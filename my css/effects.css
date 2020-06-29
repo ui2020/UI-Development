@@ -1,0 +1,16 @@
+form{
+    width: fit-content;
+    border: 1px solid darkblue;
+    padding: 15px;
+    box-shadow: 2px 2px 4px darkblue;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 20px 20px;
+}
+button{
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border: green;
+}
