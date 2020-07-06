@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>value with submit</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $("h2").css({'background-color':'darkcyan','color':'white','text-align':'center',
+                'padding':'5px','border-radius':'5px'});
+                $("dt").css({'display':'inline-block','background-color':'tomato',
+                'color':'white','padding':'5px','border-radius':'5px'});
+                $("#btnSubmit").css({'color':'red','border':'1px solid red','font-size':'1em',
+                'border-radius':'9px','background-color':'white','padding':'5px 8px 5px 8px'});
+                $("#btnSubmit:hover").css({'background-color':'red','color':'white'});
+
+                $("#btnSubmit").click(function(){
+                    $("#lblName").html($("#txtName").val());
+                    $("#lblcity").html($("#lstCities").val());
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+        <h2>register</h2>
+        <dl>
+            <dt>name</dt>
+            <dd><input type="text" id="txtName"></dd>
+            <dt>city</dt>
+            <dd>
+                <select id="lstCities">
+                    <option>hyderabad</option>
+                    <option>bangalore</option>
+                    <option>mumbai</option>
+                    <option>ahmedabad</option>
+                </select>
+            </dd>
+        </dl>
+        <button id="btnSubmit">submit</button>
+        </div>
+        <div>
+            <h2>details</h2>
+            <dl>
+                <dt>name</dt>
+                <dd id="lblName"></dd><br>
+                <dt>city</dt>
+                <dd id="lblcity"></dd>
+            </dl>
+        </div>
+    </body>
+</html>
