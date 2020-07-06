@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>id and class</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $("h1").text("Welcome to jquery");
+                $("p").text("This is displayed with jquery");
+                $("ul>li").text("this is list-item under unordered list");
+                alert("hello");
+                $('div>p').text('hello jquery');
+                $("#msg").text('this message is displayed with id');
+                $('.message').text("this message is displayed with class");
+                $("#term1,#term2").text('these are dataterms with multiple id under datalist');
+                $('.def1,.def2').text('these are datadefinitions with multiple class under datalist');
+
+            })
+        </script>
+    </head>
+    <body>
+        <h1></h1>
+        <p></p>
+        <ul>
+            <li></li>
+            <li id="msg"></li>
+            <li class="message"></li>
+        </ul>
+        <div>
+            <p></p>
+        </div>
+        <dl>
+            <dt id="term1"></dt>
+            <dd class="def1"></dd>
+            <dt id="term2"></dt>
+            <dd class="def2"></dd>
+        </dl>
+    </body>
+</html>
