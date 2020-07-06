@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html text</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                var userName=prompt("enter username");
+                if(userName==null){
+                    $("#msg").text(`you cancelled`);
+                }else if(userName==""){
+                    $("#msg").text(`name can't be empty`);
+                }else{
+                    $("#msg").html(`hello <b><i>${userName}</i></b>`);
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div id="msg">
+
+        </div>
+    </body>
+</html>
